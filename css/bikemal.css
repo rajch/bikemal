@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+.controls {
+    margin: 1rem;
+}
+
+.controls button {
+    width: 6rem;
+}
+
+.bm-container {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.bm-titlebar {
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.bm-content {
+    flex: 1;
+
+    padding: 0px 2px 2px;
+    min-height: 0;
+}
+
+.bm-content pre {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bm-content pre code {
+    overflow: scroll;
+    height: 100%;
+}
+
+.bm-content #bm-codeeditor {
+    width: 100%;
+    height: 100%;
+    padding: 0.5em;
+}
+
+
+.bm-minimize, .bm-maximize, .bm-close {
+    width: 1.95rem;
+    height: 1.95rem;
+}
+
+/* 
+    "Fruity" look.
+*/ 
+.macesque .bm-titlebar  {
+    height: initial;
+    background-color: black;
+    padding: 3px 5px 3px 3px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 7px;
+    font-size: 13px;
+    text-shadow: 1px 1px #0f1089;
+}
+
+.macesque .bm-minimize,.macesque  .bm-maximize,.macesque  .bm-close {
+    border-color: black;
+    border-radius: 1.5rem;
+    margin: 0.25rem 0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.macesque .bm-minimize {
+    background-color: yellow;
+    order: 3;
+}
+
+.macesque .bm-maximize {
+    background-color: green;
+    order: 2;
+}
+
+.macesque .bm-close {
+    background-color: red;
+    order: 1;
+}
+
+.macesque .bm-content {
+    background-color: black;
+    border-width: 0px 2px 2px;
+    border-style: inset;
+    border-color: black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 7px;
+    color: white;
+}
+
+/*
+    "Experienced" look.
+    Colors and gradients shamelessly copied from the "XP" theme of XP.css
+    https://github.com/botoxparty/XP.css
+*/
+.xpesque .bm-titlebar  {
+    padding: 3px 5px 3px 3px;
+    border-top: 1px solid #0831d9;
+    border-left: 1px solid #0831d9;
+    border-right: 1px solid #001ea0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 7px;
+    font-size: 13px;
+    text-shadow: 1px 1px #0f1089;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.xpesque .bm-titlebar, .xpesque .bm-minimize, .xpesque .bm-maximize {
+    background: linear-gradient(
+        180deg,
+        rgba(9, 151, 255, 1) 0%,
+        rgba(0, 83, 238, 1) 8%,
+        rgba(0, 80, 238, 1) 40%,
+        rgba(0, 102, 255, 1) 88%,
+        rgba(0, 102, 255, 1) 93%,
+        rgba(0, 91, 255, 1) 95%,
+        rgba(0, 61, 215, 1) 96%,
+        rgba(0, 61, 215, 1) 100%
+    );
+}
+
+.xpesque .bm-minimize, .xpesque .bm-maximize, .xpesque .bm-close {
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    margin: 2px;
+} 
+
+.xpesque .bm-minimize {
+    order: 3;
+}
+
+.xpesque .bm-maximize {
+    order: 2;
+}
+
+.xpesque .bm-close {
+    background-color: red;
+    order: 1;
+}
+
+.xpesque .bm-content {
+    border-width: 0px 2px 2px;
+    border-style: inset;
+    border-color: blue;
+}
+
+/*
+    "Old" look.
+    Colors and gradients shamelessly copied from the "98" theme of XP.css
+    https://github.com/botoxparty/XP.css
+*/
+.oldesque {
+    box-shadow: inset -1px -1px #0a0a0a,
+    inset 1px 1px #dfdfdf,
+    inset -2px -2px #808080,
+    inset 2px 2px #ffffff;
+    background: #c0c0c0;
+}
+
+.oldesque .bm-titlebar  {
+    margin: 3px 3px 0px;
+    padding: 3px 5px 3px 3px;
+    box-shadow: none, inset 1px 1px #dfdfdf, inset -2px -2px #808080, inset 2px 2px #ffffff;
+    background: linear-gradient(
+        90deg,
+        #000080,
+        #1084d0
+      );
+    font-size: 13px;
+    text-shadow: 1px 1px #0a0a0a;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.oldesque .bm-minimize, .oldesque .bm-maximize, .oldesque .bm-close {
+    border: none;
+    background: #c0c0c0;
+    box-shadow: inset -1px -1px #0a0a0a,
+                inset 1px 1px #ffffff,
+                inset -2px -2px #808080,
+                inset 2px 2px #dfdfdf;
+    margin: 2px;
+} 
+
+.oldesque .bm-minimize {
+    order: 3;
+}
+
+.oldesque .bm-maximize {
+    order: 2;
+}
+
+.oldesque .bm-close {
+    order: 1;
+}
+
+.oldesque .bm-content pre {
+    padding: 2px 2px;
+}

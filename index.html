@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikemal</title>
+    <link rel="stylesheet" href="css/bikemal.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Bikemal</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <label>Look:</label>
+            <select id="cmbSelect">
+                <option value="macesque">Fruity</option>
+                <option value="xpesque">Experienced</option>
+                <option value="oldesque">Old</option>
+            </select>
+            <label>Color scheme:</label>
+            <select id="cmbStyleSelect">
+                <option value="default">Default</option>
+                <option value="vs">Visual Studio</option>
+                <option value="dark">Dark</option>
+                <option value="idea">IntelliJ Idea</option>
+                <option value="monokai">Monokai</option>
+            </select>
+            <button id="cmdEdit">Edit</button>
+            <button id="cmdSave" class="hidden">Export</button>
+        </div>
+        <div class="bm-container" id="container">
+            <div class="bm-titlebar">
+                <div class="bm-minimize"></div>
+                <div class="bm-maximize"></div>
+                <div class="bm-close"></div>
+            </div>
+            <div class="bm-content">
+<pre id="bm-codeview">
+<code>
+package main
+
+import fmt
+
+func main() {
+    // fmt.Println("Hello world.")
+    fmt.Println("Hello world.")
+}
+</code>
+</pre>
+<textarea id="bm-codeeditor" class="hidden">
+package main
+
+import fmt
+
+func main() {
+    fmt.Println("Hello world.")
+}
+</textarea>
+            </div>
+        </div>
+    </main>
+    <!-- Load Highlight.js from CDN. Style and script. -->
+    <link id="codestyle" rel="stylesheet"
+        href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+
+    <!-- Load dom-to-image from npm via unpkg. -->
+    <script src="http://unpkg.com/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
+
+
+    <script src="js/bikemal.js"></script>
+</body>
