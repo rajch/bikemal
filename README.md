@@ -11,3 +11,4 @@ This project does not intend to be a replacement in any way; it's just a proof-o
 
 The coding style in the javascript file, and especially the variable and function names, are part of the "old" in-joke. People as old as us may get it :-).
 
+View the results at [https://rajch.github.io/bikemal/](https://rajch.github.io/bikemal/).
