@@ -32,7 +32,11 @@
     })
 
     // Code style selection
-    const STYLECSSBASE = "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/"
+    const STYLECSSBASE = "//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/"
+    // If you want to view the HTML file off a file system, comment out the previous line
+    // and uncomment the next one.
+    // const STYLECSSBASE = "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/"
+
     cmbStyleSelect.addEventListener("input", function cmbStyleSelect_input(e) {
         stylelinktag.href = STYLECSSBASE + cmbStyleSelect.value + ".min.css"
     })
