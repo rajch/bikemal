@@ -18,6 +18,7 @@
     var cmdEdit = document.getElementById("cmdEdit")
     var pnlView = document.getElementById("bm-codeview")
     var txtEditor = document.getElementById("bm-codeeditor")
+    var cmbSizeSelect = document.getElementById("cmbSizeSelect")
     var cmdSave = document.getElementById("cmdSave")
 
     // Look selection
@@ -65,6 +66,15 @@
                 hljs.highlightBlock(code)
             }
         }
+    })
+
+    // Editor sizing
+    cmbSizeSelect.addEventListener("input", function cmbSizeSelect_input(e){
+        let selected = cmbSizeSelect.options[cmbSizeSelect.selectedIndex]
+        let dwidth = selected.getAttribute("data-width")
+        let dheight = selected.getAttribute("data-height")
+        container.style.width = dwidth + "px"
+        container.style.height = dheight + "px"
     })
 
     // Image saving
